@@ -16,11 +16,12 @@ final class WeatherFetcherViewModel: ObservableObject {
     @Published var didLoadSuccessfully: Bool? = .none
     
     init() {
-        apiKey = "paste your weather API key here"
+        apiKey = "209671db77264debb359dd7faed7f5c2"
+//        apiKey = "paste your weather API key here"
 //        -> you can generate yours for free at https://openweathermap.org/api
     }
     
-    func fetch(cityName: String) {
+    func fetch(cityName: String) async {
         
         let urlString = "https://api.openweathermap.org/data/2.5/weather?q=\(cityName)&appid=\(apiKey)"
         let url = URL(string: urlString)!

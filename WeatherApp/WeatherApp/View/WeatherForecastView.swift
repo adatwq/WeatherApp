@@ -74,7 +74,9 @@ struct WeatherForecastView: View {
         }
         .navigationTitle("\(cityName.capitalized) Weather")
         .onAppear(perform: {
-            weatherViewModel.fetch(cityName: cityName)
+            Task{
+                await weatherViewModel.fetch(cityName: cityName)
+            }
         })
     }
 }
