@@ -25,20 +25,28 @@ final class WeatherFetcherViewModel: ObservableObject {
         let urlString = "https://api.openweathermap.org/data/2.5/weather?q=\(cityName)&appid=\(apiKey)"
         let url = URL(string: urlString)!
         
-        if let (data, _) = try? await URLSession.shared.data(from: url) {
+        do{
+            let (data, _) = try await URLSession.shared.data(from: url)
             let decoder = JSONDecoder()
-            if let decodedWeatherData = try? decoder.decode(WeatherData.self, from: data) {
-                self.data = decodedWeatherData
-                self.didLoadSuccessfully = true
-                print(data)
-            } else {
-                self.didLoadSuccessfully = false
-                self.error = "Undecodable data"
-                print("Undecodable data")
-            }
-        } else {
-            self.error = "Unhandled Error"
+            self.data = try decoder.decode(WeatherData.self, from: data)
+            self.didLoadSuccessfully = true
+            print(data)
+            
+        }  catch let DecodingError.dataCorrupted(context) {
+            self.error = "dataCorrupted(\(context))"
             self.didLoadSuccessfully = false
-          }
+            print(Error.corruptedData.rawValue)
+            
+        } catch let DecodingError.keyNotFound(key, context) {
+            self.error = "keyNotFound(\(key), \(context))"
+            self.didLoadSuccessfully = false
+            print(Error.keyNotFound.rawValue)
+            
+        } catch {
+            self.error = error.localizedDescription
+            self.didLoadSuccessfully = false
+            print(error)
+        }
     }
 }
+
