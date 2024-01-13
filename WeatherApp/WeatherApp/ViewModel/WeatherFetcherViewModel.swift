@@ -16,8 +16,7 @@ final class WeatherFetcherViewModel: ObservableObject {
     @Published var didLoadSuccessfully: Bool? = .none
     
     init() {
-        apiKey = "209671db77264debb359dd7faed7f5c2"
-//        apiKey = "paste your weather API key here"
+        apiKey = "paste your weather API key here"
 //        -> you can generate yours for free at https://openweathermap.org/api
     }
     
