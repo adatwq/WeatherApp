@@ -8,7 +8,7 @@
 import Foundation
 
 // MARK: - WeatherData
-struct WeatherData: Codable {
+struct WeatherData{
   var coord: Coord?
   var weather: [Weather]?
   var base: String?
@@ -24,18 +24,18 @@ struct WeatherData: Codable {
   var cod: Int?
 
   // MARK: - Clouds
-  struct Clouds: Codable {
+  struct Clouds{
     var all: Int?
   }
   
   // MARK: - Coord
-  struct Coord: Codable {
+  struct Coord{
     var lon: Double?
     var lat: Double?
   }
   
   // MARK: - Main
-  struct Main: Codable {
+  struct Main{
     var temp: Double?
     var feelsLike: Double?
     var tempMin: Double?
@@ -45,7 +45,7 @@ struct WeatherData: Codable {
   }
   
   // MARK: - Sys
-  struct Sys: Codable {
+  struct Sys{
     var type: Int?
     var id: Int?
     var country: String
@@ -54,7 +54,7 @@ struct WeatherData: Codable {
   }
   
   // MARK: - Weather
-  struct Weather: Codable {
+  struct Weather{
     var id: Int?
     var main: String?
     var weatherDescription: String?
@@ -62,7 +62,7 @@ struct WeatherData: Codable {
   }
   
   // MARK: - Wind
-  struct Wind: Codable {
+  struct Wind{
     var speed: Double?
     var deg: Int?
   }
