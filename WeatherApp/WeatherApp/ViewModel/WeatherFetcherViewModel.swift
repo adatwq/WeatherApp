@@ -18,6 +18,6 @@ final class WeatherFetcherViewModel: ObservableObject {
     func fetch(cityName: String) {
         
         //MARK: Do your fetching here using URLSession
-     
+        
     }
 }
