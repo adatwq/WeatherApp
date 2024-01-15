@@ -14,6 +14,7 @@
 		701CE01B2B46EEA4002D5DB1 /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701CE01A2B46EEA4002D5DB1 /* WeatherData.swift */; };
 		701CE01D2B46F00C002D5DB1 /* WeatherForecastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701CE01C2B46F00C002D5DB1 /* WeatherForecastView.swift */; };
 		701CE01F2B46F076002D5DB1 /* WeatherFetcherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701CE01E2B46F076002D5DB1 /* WeatherFetcherViewModel.swift */; };
+		7028E1F52B55363E008EA558 /* KelvinToCelsius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7028E1F42B55363E008EA558 /* KelvinToCelsius.swift */; };
 		70EC38F12B53173E00432956 /* ErrorEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EC38F02B53173E00432956 /* ErrorEnum.swift */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +27,7 @@
 		701CE01A2B46EEA4002D5DB1 /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
 		701CE01C2B46F00C002D5DB1 /* WeatherForecastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherForecastView.swift; sourceTree = "<group>"; };
 		701CE01E2B46F076002D5DB1 /* WeatherFetcherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherFetcherViewModel.swift; sourceTree = "<group>"; };
+		7028E1F42B55363E008EA558 /* KelvinToCelsius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KelvinToCelsius.swift; sourceTree = "<group>"; };
 		70EC38F02B53173E00432956 /* ErrorEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorEnum.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				70EC38F02B53173E00432956 /* ErrorEnum.swift */,
+				7028E1F42B55363E008EA558 /* KelvinToCelsius.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 				701CE00A2B46EE53002D5DB1 /* WeatherAppApp.swift in Sources */,
 				701CE01F2B46F076002D5DB1 /* WeatherFetcherViewModel.swift in Sources */,
 				70EC38F12B53173E00432956 /* ErrorEnum.swift in Sources */,
+				7028E1F52B55363E008EA558 /* KelvinToCelsius.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

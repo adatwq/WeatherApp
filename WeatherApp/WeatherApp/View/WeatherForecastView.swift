@@ -45,7 +45,7 @@ struct WeatherForecastView: View {
                             .padding()
                        
                         
-                        if let temp = weatherViewModel.data.main?.temp?.description {
+                        if let temp = weatherViewModel.data.main?.temp?.kelvinToCelsius.description {
                             Text(temp)
                                 .padding()
                             Spacer()
