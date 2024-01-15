@@ -45,7 +45,7 @@ struct WeatherForecastView: View {
                             .padding()
                        
                         
-                        if let temp = weatherViewModel.data.main?.temp?.description {
+                        if let temp = weatherViewModel.data.main?.temp?.kelvinToCelsius.description {
                             Text(temp)
                                 .padding()
                             Spacer()
@@ -81,4 +81,10 @@ struct WeatherForecastView: View {
 
 #Preview {
     WeatherForecastView(cityName: "")
+}
+
+extension Double {
+  var kelvinToCelsius: Double {
+    return self - 273.15
+  }
 }
